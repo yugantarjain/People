@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ViewController: UIViewController {
 
@@ -18,6 +19,8 @@ class ViewController: UIViewController {
         
     }
 
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var submitButton: UIButton!
     
     @IBAction func submitEmail(_ sender: UIButton) {
@@ -25,6 +28,11 @@ class ViewController: UIViewController {
     }
     
     func submit() {
+        let email = emailField.text ?? ""
+        let password = passwordField.text ?? ""
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            // ...
+        }
         return
     }
     
