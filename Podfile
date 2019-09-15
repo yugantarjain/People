@@ -7,5 +7,6 @@ target 'People' do
 
   # Pods for People
 	pod 'Firebase/Auth'
+    pod 'Firebase/Analytics'
 
 end
