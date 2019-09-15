@@ -21,16 +21,54 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="8o2-PV-VuI">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oPG-c5-8Me">
+                                <rect key="frame" x="50" y="242.5" width="275" height="82"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DRX-Xi-bn2">
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="31"/>
+                                        <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kindly enter a valid email adress issued by an institution" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEx-Oy-73c">
+                                        <rect key="frame" x="0.0" y="41" width="275" height="41"/>
+                                        <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHc-BF-Nfb">
+                                <rect key="frame" x="161.5" y="354.5" width="52" height="32"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitEmail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ACq-Ck-dKJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="uHc-BF-Nfb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0HQ-rh-8UY"/>
                             <constraint firstItem="8o2-PV-VuI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1kf-nv-4ZP"/>
                             <constraint firstItem="8o2-PV-VuI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Adr-SV-TLH"/>
+                            <constraint firstItem="uHc-BF-Nfb" firstAttribute="top" secondItem="oPG-c5-8Me" secondAttribute="bottom" constant="30" id="Cbq-K0-BAm"/>
+                            <constraint firstItem="oPG-c5-8Me" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="EsR-84-ZRT"/>
                             <constraint firstItem="8o2-PV-VuI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="L5v-k4-2j6"/>
+                            <constraint firstItem="oPG-c5-8Me" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="lG5-4g-fMi"/>
+                            <constraint firstAttribute="trailing" secondItem="oPG-c5-8Me" secondAttribute="trailing" constant="50" id="o3m-Q3-OnH"/>
                             <constraint firstItem="8o2-PV-VuI" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="yex-lh-E7n"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="submitButton" destination="uHc-BF-Nfb" id="NcQ-Vc-asn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
