@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import MapKit
+import FirebaseAuth
 
 class FindPeopleViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UITextFieldDelegate {
     
@@ -32,6 +33,8 @@ class FindPeopleViewController: UIViewController, CLLocationManagerDelegate, MKM
             self.destinationField.text = "University of Waterloo"
 //            spinner.removeFromSuperview()
         }
+        
+        print(name)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

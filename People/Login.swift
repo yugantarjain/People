@@ -9,7 +9,9 @@
 import UIKit
 import FirebaseAuth
 
-class ViewController: UIViewController {
+var name = ""
+
+class ViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,8 +19,18 @@ class ViewController: UIViewController {
         
         submitButton.layer.cornerRadius = 8
         
+        nameField.delegate = self
+        emailField.delegate = self
+        passwordField.delegate = self
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
+    @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var submitButton: UIButton!
@@ -28,8 +40,10 @@ class ViewController: UIViewController {
     }
     
     func submit() {
+        name = nameField.text ?? ""
         let email = emailField.text ?? ""
         let password = passwordField.text ?? ""
+        self.performSegue(withIdentifier: "toApp", sender: self)
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             // ...
             print(error)
@@ -37,7 +51,6 @@ class ViewController: UIViewController {
             guard error == nil else {
                 return
             }
-            self.performSegue(withIdentifier: "toApp", sender: self)
         }
         return
     }
