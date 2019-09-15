@@ -8,8 +8,9 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
-class FindPeopleViewController: UIViewController, CLLocationManagerDelegate {
+class FindPeopleViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     let locationManager = CLLocationManager()
 
@@ -20,10 +21,11 @@ class FindPeopleViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
         
-        
+        mapView.userTrackingMode = .follow
     }
     
-
+    @IBOutlet weak var mapView: MKMapView!
+    
     /*
     // MARK: - Navigation
 

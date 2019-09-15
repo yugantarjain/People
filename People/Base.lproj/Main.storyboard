@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZoE-pa-WFT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Ue-fo-s6g">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -147,20 +147,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xN5-mq-FPm">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xN5-mq-FPm">
                                 <rect key="frame" x="0.0" y="116" width="375" height="251"/>
                             </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Destination" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dXM-2q-So2">
+                                <rect key="frame" x="70" y="417" width="235" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2Nk-kH-PgB"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjr-vT-0fs">
+                                <rect key="frame" x="160" y="517" width="55" height="30"/>
+                                <state key="normal" title="Confirm"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xN5-mq-FPm" firstAttribute="top" secondItem="Py6-KD-b9a" secondAttribute="top" id="0PT-Mm-fRo"/>
+                            <constraint firstItem="Xjr-vT-0fs" firstAttribute="top" secondItem="dXM-2q-So2" secondAttribute="bottom" constant="60" id="1iE-bx-9fP"/>
+                            <constraint firstItem="Xjr-vT-0fs" firstAttribute="centerX" secondItem="Lap-v9-il2" secondAttribute="centerX" id="Ixx-NL-kYS"/>
                             <constraint firstItem="Py6-KD-b9a" firstAttribute="bottom" secondItem="xN5-mq-FPm" secondAttribute="bottom" constant="300" id="JWS-kV-cNI"/>
+                            <constraint firstItem="Py6-KD-b9a" firstAttribute="trailing" secondItem="dXM-2q-So2" secondAttribute="trailing" constant="70" id="PFF-pN-77i"/>
                             <constraint firstItem="xN5-mq-FPm" firstAttribute="leading" secondItem="Py6-KD-b9a" secondAttribute="leading" id="cJi-5P-Dhx"/>
+                            <constraint firstItem="dXM-2q-So2" firstAttribute="leading" secondItem="Py6-KD-b9a" secondAttribute="leading" constant="70" id="cKy-eU-cpf"/>
                             <constraint firstItem="xN5-mq-FPm" firstAttribute="trailing" secondItem="Py6-KD-b9a" secondAttribute="trailing" id="kH6-rf-EHZ"/>
+                            <constraint firstItem="dXM-2q-So2" firstAttribute="top" secondItem="xN5-mq-FPm" secondAttribute="bottom" constant="50" id="nJF-qp-ny1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Py6-KD-b9a"/>
                     </view>
                     <navigationItem key="navigationItem" title="People" id="Sb1-xS-i0W"/>
+                    <connections>
+                        <outlet property="mapView" destination="xN5-mq-FPm" id="erA-s0-Nal"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JBw-zC-4D2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

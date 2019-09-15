@@ -32,6 +32,12 @@ class ViewController: UIViewController {
         let password = passwordField.text ?? ""
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             // ...
+            print(error)
+            print(authResult)
+            guard error == nil else {
+                return
+            }
+            self.performSegue(withIdentifier: "toApp", sender: self)
         }
         return
     }
