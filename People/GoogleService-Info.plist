@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>313491045142-h5219ajpqjkgjq6t5e20o25daki0v0lq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.313491045142-h5219ajpqjkgjq6t5e20o25daki0v0lq</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBzjwqrk8ipDvXR9Q2Es4V4KbCzhlhkieo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>313491045142</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.People</string>
+	<key>PROJECT_ID</key>
+	<string>people-e7edf</string>
+	<key>STORAGE_BUCKET</key>
+	<string>people-e7edf.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:313491045142:ios:7cbc9c2f6eba5be8316e37</string>
+	<key>DATABASE_URL</key>
+	<string>https://people-e7edf.firebaseio.com</string>
+</dict>
+</plist>
