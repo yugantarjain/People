@@ -14,6 +14,7 @@
 		53139C07232DB7E6005AE5C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53139C05232DB7E6005AE5C6 /* LaunchScreen.storyboard */; };
 		53139C0F232DBD2B005AE5C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53139C0E232DBD2B005AE5C6 /* GoogleService-Info.plist */; };
 		53139C11232E07F1005AE5C6 /* FindPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53139C10232E07F1005AE5C6 /* FindPeopleViewController.swift */; };
+		53DA4905232E77E300667EB5 /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DA4904232E77E300667EB5 /* ConnectViewController.swift */; };
 		B28B8F8CCA3CF43E61A1AF1D /* Pods_People.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8594E606768D7E1207593BCF /* Pods_People.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		53139C08232DB7E6005AE5C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53139C0E232DBD2B005AE5C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		53139C10232E07F1005AE5C6 /* FindPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPeopleViewController.swift; sourceTree = "<group>"; };
+		53DA4904232E77E300667EB5 /* ConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
 		8594E606768D7E1207593BCF /* Pods_People.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_People.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D58368870C01EF19E9575B64 /* Pods-People.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-People.release.xcconfig"; path = "Pods/Target Support Files/Pods-People/Pods-People.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +79,7 @@
 				53139BFC232DB7E5005AE5C6 /* AppDelegate.swift */,
 				53139BFE232DB7E5005AE5C6 /* Login.swift */,
 				53139C10232E07F1005AE5C6 /* FindPeopleViewController.swift */,
+				53DA4904232E77E300667EB5 /* ConnectViewController.swift */,
 				53139C00232DB7E5005AE5C6 /* Main.storyboard */,
 				53139C03232DB7E6005AE5C6 /* Assets.xcassets */,
 				53139C05232DB7E6005AE5C6 /* LaunchScreen.storyboard */,
@@ -189,14 +192,24 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-People/Pods-People-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,6 +227,7 @@
 				53139C11232E07F1005AE5C6 /* FindPeopleViewController.swift in Sources */,
 				53139BFF232DB7E5005AE5C6 /* Login.swift in Sources */,
 				53139BFD232DB7E5005AE5C6 /* AppDelegate.swift in Sources */,
+				53DA4905232E77E300667EB5 /* ConnectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
