@@ -53,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b6j-Iz-XAm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-664" y="28"/>
+            <point key="canvasLocation" x="-694" y="30"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -132,27 +132,57 @@
                         <outlet property="emailField" destination="DRX-Xi-bn2" id="y9e-Vf-yXd"/>
                         <outlet property="passwordField" destination="h43-da-QO4" id="2Wv-ej-dYb"/>
                         <outlet property="submitButton" destination="uHc-BF-Nfb" id="NcQ-Vc-asn"/>
-                        <segue destination="kaS-Ky-hkM" kind="show" identifier="toApp" id="5x9-0y-fEC"/>
+                        <segue destination="2Ue-fo-s6g" kind="show" identifier="toApp" id="5x9-0y-fEC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
         </scene>
-        <!--View Controller-->
+        <!--People-->
         <scene sceneID="8Gd-QN-KjM">
             <objects>
-                <viewController id="kaS-Ky-hkM" sceneMemberID="viewController">
+                <viewController id="kaS-Ky-hkM" customClass="FindPeopleViewController" customModule="People" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lap-v9-il2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xN5-mq-FPm">
+                                <rect key="frame" x="0.0" y="116" width="375" height="251"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xN5-mq-FPm" firstAttribute="top" secondItem="Py6-KD-b9a" secondAttribute="top" id="0PT-Mm-fRo"/>
+                            <constraint firstItem="Py6-KD-b9a" firstAttribute="bottom" secondItem="xN5-mq-FPm" secondAttribute="bottom" constant="300" id="JWS-kV-cNI"/>
+                            <constraint firstItem="xN5-mq-FPm" firstAttribute="leading" secondItem="Py6-KD-b9a" secondAttribute="leading" id="cJi-5P-Dhx"/>
+                            <constraint firstItem="xN5-mq-FPm" firstAttribute="trailing" secondItem="Py6-KD-b9a" secondAttribute="trailing" id="kH6-rf-EHZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Py6-KD-b9a"/>
                     </view>
+                    <navigationItem key="navigationItem" title="People" id="Sb1-xS-i0W"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JBw-zC-4D2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="868" y="31"/>
+            <point key="canvasLocation" x="1732" y="29.23538230884558"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="O8s-lS-xem">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Ue-fo-s6g" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="jEE-fb-rwq">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kaS-Ky-hkM" kind="relationship" relationship="rootViewController" id="YWc-mU-lPt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z1G-Qi-bAH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="30.134932533733135"/>
         </scene>
     </scenes>
     <resources>
